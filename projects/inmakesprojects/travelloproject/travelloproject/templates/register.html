@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body style="background-image:url('https://th.bing.com/th/id/R.dabb052406b98ad53abf976db0679e31?rik=Es5Oobx0kFRC%2bg&riu=http%3a%2f%2f4.bp.blogspot.com%2f-cQ4XnoW4Ysc%2fTzbg3Jh25VI%2fAAAAAAAAA74%2fxFjSDny2SqU%2fs1600%2f21.Jpg&ehk=Q88y%2b7a98mHBLzs3%2fXLC4iuSw8LOmnic8Q%2bqgUPUcpg%3d&risl=&pid=ImgRaw&r=0')">
+<h1 style ="text-align:center;font-size:160%;color:black">Registration</h1>
+<form style="text-align:center;" action="register" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter username"><br>
+     <input type="text" name="first_name" placeholder="Enter First Name"><br>
+     <input type="text" name="last_name" placeholder="Enter Lastname"><br>
+     <input type="email" name="email" placeholder="Enter email id"><br>
+     <input type="password" name="password" placeholder="Enter Password"><br>
+     <input type="password" name="password1" placeholder="Enter confirm password"><br>
+    <input type="submit">
+</form>
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+
+</body>
+</html>
